@@ -61,7 +61,7 @@ date_default_timezone_set("America/Detroit");
 //  Connection to database
 //  --------------------------------------------------------------------
 
-if ($_REQUEST["Action"] == "Generate") {
+if (!empty($_REQUEST) && $_REQUEST["Action"] == "Generate") {
   $Host = $_REQUEST["Host"];
   $User = $_REQUEST["User"];
   $Password = $_REQUEST["Password"];
@@ -77,7 +77,7 @@ if ($_REQUEST["Action"] == "Generate") {
 //  Table we want to make class for
 //  --------------------------------------------------------------------
 
-if ($_REQUEST["Action"] == "Generate") {
+if (!empty($_REQUEST) && $_REQUEST["Action"] == "Generate") {
   $TableName = $_REQUEST["TableName"];
   $PrimaryField = $_REQUEST["PrimaryField"];
 }
